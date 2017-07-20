@@ -1,0 +1,22 @@
+{
+  "name": "sass-mixin-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattbruton/d21-sass-mixin-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattbruton/d21-sass-mixin-demo/issues"
+  },
+  "homepage": "https://github.com/mattbruton/d21-sass-mixin-demo#readme",
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  }
+}

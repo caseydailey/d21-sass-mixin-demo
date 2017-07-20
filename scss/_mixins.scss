@@ -1,0 +1,31 @@
+@import 'config';
+
+@mixin btn-font() {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+@mixin btn-border() {
+  border-radius: 10px;
+  border-style: none;
+}
+
+@mixin btn-invert($bool) {
+  @if ($bool) {
+    color: black;
+  } @else {
+    color: white;
+  }
+}
+
+@mixin btn-background-colors($map) {
+  // In this example, we'll iterate over each key:value pair in our map and create a new rule set for each.
+  @each $theme, $color in $map {
+    &--#{$theme} {
+        background-color: $color;
+        border: 4px solid darken($color, 20%);
+    }
+  }
+}
