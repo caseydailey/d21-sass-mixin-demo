@@ -2,57 +2,21 @@
 // Intro to Mixins!
 
 // Some Sass Variables to name some colors!
-$mine-shaft  : #313131;
-$salem       : #118D4F;
-$thunderbird : #B51D23;
-$victoria    : #563D7C;
-$web-orange  : #FFA500;
-$white       : #FFFFFF;
+
 
 //Sass Maps
-$btn-bg-colors: (
-  default : $mine-shaft,
-  success : $salem,
-  error   : $thunderbird,
-  warning : $web-orange,
-  info    : $victoria
-);
 
-@mixin btn-font() {
-  color: $white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-
-@mixin btn-border() {
-  border-radius: 10px;
-  border-style: none;
-}
 
 // Sample Mixin with conditional logic:
 // We can pass arguments to a mixin -- here we will pass a boolean.
 // The mixin will change the text color of the elements that include this mixin based on the boolean.
-@mixin btn-invert($bool) {
-  @if($bool){
-    color: $mine-shaft;
-  } @else {
-    color: $white;
-  }
-}
 
 // Sample Mixin to generate multiple selectors:
 
 // Use the mixin command and create a name for the mixin
-@mixin btn-background-colors($map) {
+
   // In this example, we'll iterate over each key:value pair in our map and create a new rule set for each.
-  @each $theme, $color in $map {
-    &--#{$theme} {
-        background-color: $color;
-        border: 4px solid darken($color, 20%);
-    }
-  }
-}
+  
 
 // Let's write some scss and include the mixin.
 #btn-container {
@@ -66,12 +30,5 @@ $btn-bg-colors: (
 
 .btn {
   flex-basis: 70px;
-  @include btn-border();
-  @include btn-font();
-  @include btn-background-colors($btn-bg-colors);
-
-  &--inverse {
-    @include btn-invert(true);
-  }
 }
 
