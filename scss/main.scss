@@ -41,7 +41,7 @@ $btn-bg-colors: (
   }
 }
 
-// Sample Mixin to generate multiple selectors:
+// Sample Mixin to generate multiple rule sets:
 
 // Use the mixin command and create a name for the mixin
 @mixin btn-background-colors($map) {
