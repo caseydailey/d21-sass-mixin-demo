@@ -1,0 +1,14 @@
+$mine-shaft  : #313131;
+$salem       : #118D4F;
+$thunderbird : #B51D23;
+$victoria    : #563D7C;
+$web-orange  : #FFA500;
+$white       : #FFFFFF;
+
+$btn-bg-colors: (
+  default : $mine-shaft,
+  success : $salem,
+  error   : $thunderbird,
+  warning : $web-orange,
+  info    : $victoria
+);
