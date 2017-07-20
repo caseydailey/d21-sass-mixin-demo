@@ -1,0 +1,22 @@
+@import 'config';
+@import 'mixins';
+
+#btn-container {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: space-between;
+  margin: auto;
+  width: 300px;
+}
+
+.btn {
+  flex-basis: 70px;
+  @include btn-border();
+  @include btn-font();
+  @include btn-background-colors($btn-bg-colors);
+
+  &--inverse {
+    @include btn-invert(true);
+  }
+}
